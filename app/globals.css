@@ -1,0 +1,11 @@
+@import "tailwindcss";
+html {
+    overflow-x: hidden;
+}
+@theme inline {
+    --font-port-sans: var(--font-port-sans)
+}
+body {
+  font-family: var(--font-montserrat), sans-serif;
+  scroll-behavior: smooth;
+}
