@@ -28,7 +28,7 @@ function PCVersion() {
     [-10, 0, 0, 15, 10, 10]
   );
   return (
-    <div className="hidden sm:block w-full h-fit">
+    <div className="hidden sm:block w-full h-fit border-b-1 border-black">
       <div className="flex w-full">
 
         <div className="w-3/5">

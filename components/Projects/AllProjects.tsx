@@ -1,6 +1,9 @@
 "use client";
 import { clamp, motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import FirstProject from "./FirstProject";
+import SecondProject from "./SecondProject";
+import ThirdProject from "./ThirdProject";
 export default function AllProjects() {
   return (
     <div className="w-full h-fit">
@@ -21,11 +24,10 @@ function PCVersion() {
     offset: ["start end", "end start"],
   });
   const scale1 = useTransform(scrollYProgress,[0.3, 0.5], ["1", "0.9"]);
-  const scale2 = useTransform(scrollYProgress,[0.5, 0.7], ["1", "0.9"]);
+  const scale2 = useTransform(scrollYProgress,[0.55, 0.75], ["1", "0.9"]);
 
   const y2 = useTransform(scrollYProgress,[0.3, 0.5], ["100%", "0%"]);
-  const y3 = useTransform(scrollYProgress,[0.5,0.7], ["100%", "0%"]);
-  console.log(y2.get())
+  const y3 = useTransform(scrollYProgress,[0.55,0.75], ["100%", "0%"]);
 
   return (
     <motion.div
@@ -34,21 +36,22 @@ function PCVersion() {
       >
       <div className="sticky top-0 w-full h-screen">
         <motion.div
-      style={{scale:scale1}}
-        className="w-screen h-screen absolute top-0 z-10 bg-red-300 flex justify-center">
-          <p className="font-port-sans text-6xl mt-12">Project 1</p>
+        style={{scale:scale1}}
+        className="w-screen h-screen absolute top-0 z-10 bg-white  border border-t-2 border-black flex justify-center">
+          <FirstProject/>
         </motion.div>
 
         <motion.div
           style={{ y:y2, scale:scale2 }}
-          className="w-screen h-screen absolute top-0 z-20 bg-yellow-300 flex justify-center"
+          className="w-screen h-screen absolute top-0 z-20 bg-white border border-t-2 border-black flex justify-center"
         >
-          <p className="font-port-sans text-6xl mt-12">Project 2</p>
+                    <SecondProject/>
+
         </motion.div>
         <motion.div
           style={{ y:y3 }}
-         className="w-screen h-screen absolute top-0 z-30 bg-blue-300 flex justify-center">
-          <p className="font-port-sans text-6xl mt-12">Project 3</p>
+         className="w-screen h-screen absolute top-0 z-30 bg-white border border-t-2 border-black flex justify-center">
+                    <ThirdProject/>
         </motion.div>
       </div>
     </motion.div>

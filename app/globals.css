@@ -124,3 +124,14 @@ body {
     @apply bg-background text-foreground;
     }
 }
+/* Be specific to avoid changing all lists on your site if you don't want to */
+.my-list-class ul {
+  list-style-type: disc; /* 'disc' is the default bullet point */
+  padding-left: 40px;  /* Adjust this value as needed */
+}
+
+/* Or if you want to target the specific list you provided */
+ul {
+    list-style: initial; /* Resets to default */
+    padding: initial;  /* Resets to default */
+}

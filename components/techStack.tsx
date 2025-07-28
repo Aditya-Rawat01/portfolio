@@ -58,7 +58,7 @@ function PCVersion() {
         <MarqueeRow baseVelocity={2}>
           {firstRow.map((data, index)=>{
             return (
-              <Image key={index} src={data} width={80} height={80} alt="tech logos" className="w-[80px]"/>
+              <Image key={index} src={data} width={data===framerMotion?140:80} alt="tech logos" className=""/>
             )
           })}
         </MarqueeRow>
