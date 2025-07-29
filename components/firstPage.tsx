@@ -14,21 +14,11 @@ export default function FirstPage() {
 }
 
 function MobileVersion() {
-  return <div className="w-full h-full sm:hidden"></div>;
+  return <div className="w-full h-full md:hidden"></div>;
 }
 function PCVersion() {
-  const targetRef = useRef<HTMLHeadingElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["start end", "end start"],
-  });
-  const wobbleY = useTransform(
-    scrollYProgress,
-    [0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
-    [-10, 0, 0, 15, 10, 10]
-  );
   return (
-    <div className="hidden sm:block w-full h-fit border-b-1 border-black">
+    <div className="hidden md:block w-full h-fit border-b-1 border-black">
       <div className="flex w-full">
 
         <div className="w-3/5">
@@ -36,17 +26,16 @@ function PCVersion() {
             <div className="h-1/2 w-full bg-[#623EFF] relative">
               <div className="w-[95%] h-full absolute z-30 rounded-tr-3xl bg-green-300"></div>
               <div className="w-[90%] h-full absolute z-40 rounded-tr-3xl bg-red-300"></div>
-              <div className="w-[85%] h-full absolute z-50 rounded-tr-3xl bg-white grid grid-rows-6 grid-cols-6">
-                <motion.h3
-                  style={{ y: wobbleY }}
-                  ref={targetRef}
-                  className="font-port-sans row-start-3 col-start-2 text-6xl"
+              <div className="w-[85%] h-full absolute z-50 rounded-tr-3xl bg-white grid grid-rows-6 grid-cols-12 lg:grid-cols-6">
+                <div className=" row-start-3 col-start-2 col-span-full text-4xl lg:text-6xl flex items-center">
+                <h3
+                  className="font-port-sans"
                 >
                   WEB
                   <br />
                   Developer
-                </motion.h3>
-                <div className="row-start-4 w-[59vw] h-28 bg-[#623EFF] text-white text-7xl grid grid-cols-7 justify-ce">
+                </h3></div>
+                <div className="row-start-4 w-[59vw] h-20 lg:h-28 bg-[#623EFF] text-white text-5xl lg:text-7xl grid grid-cols-12 lg:grid-cols-7">
                   <p className="col-start-2 row-start-2 col-span-full">
                     Aditya Rawat
                   </p>
@@ -56,11 +45,11 @@ function PCVersion() {
             <div className="h-1/2 w-full bg-[#623EFF] relative">
               <div className="w-[95%] h-full absolute z-30 rounded-br-3xl bg-green-300"></div>
               <div className="w-[90%] h-full absolute z-40 rounded-br-3xl bg-red-300"></div>
-              <div className="w-[85%] h-full absolute z-50 rounded-br-3xl bg-white grid grid-rows-8 grid-cols-6">
-                <h3 className="font-port-sans row-start-3 col-start-2 text-6xl col-span-full flex items-center">
+              <div className="w-[85%] h-full absolute z-50 rounded-br-3xl bg-white grid grid-rows-8 grid-cols-12 lg:grid-cols-6">
+                <h3 className="font-port-sans row-start-3 col-start-2  text-4xl lg:text-6xl col-span-full flex items-center">
                   About Me
                 </h3>
-                <p className="row-start-4 col-start-2 col-span-full text-3xl">
+                <p className="row-start-4 col-start-2 col-span-full text-xl lg:text-3xl">
                   Relentless coder seeking breakthrough opportunities. Fearlessly
                   pursuing excellence in every line of code.
                 </p>

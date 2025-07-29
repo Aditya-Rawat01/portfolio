@@ -1,5 +1,5 @@
 import HeroVideoDialog from "../magicui/hero-video-dialog";
-import thumbnail from "@/public/ProjectsData/ThirdProjectThumbnail.png"
+import thumbnail from "@/public/ProjectsData/ThirdProjectThumbnail.png";
 import {
   Accordion,
   AccordionContent,
@@ -21,10 +21,10 @@ function MobileVersion() {
 
 function PCVersion() {
   return (
-    <div className="w-full h-screen bg-white/90 flex flex-col gap-5 items-center">
-      <p className="font-port-sans lowercase text-6xl mt-12">Slim-url</p>
-      <HeroVideoDialog
-        className="block dark:hidden w-1/3 h-1/3"
+    <div className="w-full h-screen bg-white/90 flex flex-col lg:gap-5 items-center">
+          <p className="font-port-sans lowercase mt-6 mb-2 lg:mt-12">Slim-url</p>
+          <HeroVideoDialog
+            className="block dark:hidden w-1/2 lg:w-1/3 h-1/3"
         animationStyle="from-center"
         videoSrc="https://res.cloudinary.com/dlvcibxgx/video/upload/v1753688691/urlShortenerCloudinary_nhsuxs.mp4"
         thumbnailSrc={thumbnail.src}
@@ -38,49 +38,50 @@ function PCVersion() {
           defaultValue="item-1"
         >
           <AccordionItem value="item-1">
-            <AccordionTrigger className="font-port-sans text-2xl">
+            <AccordionTrigger className="font-port-sans text-xl lg:text-2xl">
               Description
             </AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-base">
-              <ol className="pl-5 flex flex-col gap-3">
-              <li className="list-disc">Tech Stack : NextJS, Jotai, Typescript, Prisma, Postgres, better-auth, zod,
-chartjs, motion</li>
-              <li className="list-disc">
-                Minimalistic typing platform for web (Devices with real
-                keyboards)*
-              </li>
-              <li className="list-disc">
-                This project is a full-stack, minimalist typing platform
-                designed to provide a clean, customizable, and effective practice environment for users of all levels. The platform's
-                core philosophy is to remove distractions and empower users with
-                detailed feedback to accelerate their typing proficiency in both
-                conventional and programming languages.
-              </li>
+            <AccordionContent className="flex flex-col text-[13px] lg:text-base">
+              <ol className="pl-5 flex flex-col lg:gap-3">
+                <li className="list-disc">
+                  Tech Stack : NEXT JS, Typescript, redis db, vercel.
+                </li>
+                <li className="list-disc">
+                  Url shortener with custom alias feature.
+                </li>
+                <li className="list-disc">
+                  Developed a high-performance, full-stack URL shortener with Next.js and upstash Redis db. 
+                  This system features ultra-fast in-memory lookups and includes custom, expiration-based link 
+                  generation for efficient, automated cleanup of inactive URLs after a two-week period.  The integration of Redis 
+                  is crucial for handling rapid read/write operations, which significantly enhances the overall responsiveness 
+                  and performance of the service.
+                </li>
               </ol>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger className="font-port-sans text-2xl">
+            <AccordionTrigger className="font-port-sans text-xl lg:text-2xl">
               Features
             </AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-base">
-              <ol className="pl-5 flex flex-col gap-3">
+            <AccordionContent className="flex flex-col text-[13px] lg:text-base">
+              <ol className="pl-5 flex flex-col lg:gap-3">
                 <li className="list-disc">
-                  Implemented 12 different customizable visual themes and
-                  different spoken and coding languages for practice like
-                  english, spanish, portuguese, java, js etc.
+                  Built and deployed a full-stack URL shortener using Next.js
+                  (frontend + backend) and Redis for ultra-fast, in-memory URL
+                  lookups.
                 </li>
                 <li className="list-disc">
-                  Responsive Design with end to end authentication implemented with better-auth supporting google, github and custom credentials for same account. 
+                  Implemented custom short URL generation with support for
+                  expiration-based link management to automatically clean up
+                  inactive links.
                 </li>
                 <li className="list-disc">
-                  Designed visual charts like problematic keys, last year tests,
-                  implemented history table with paginated queries for the user
-                  progress.
+                  Integrated Redis to efficiently handle rapid read/write
+                  operations, enhancing system responsiveness and performance.
                 </li>
                 <li className="list-disc">
-                  Implemented bot detection code logic in backend while storing
-                  tests to ensure the fair practices and avoid any cheating.
+                  Links stay active upto two weeks ensuring a scheduled cleanup
+                  for space efficiency.
                 </li>
               </ol>
             </AccordionContent>
@@ -88,11 +89,24 @@ chartjs, motion</li>
         </Accordion>
       </div>
       <div className="absolute flex gap-4 bottom-2">
-        <p className="w-fit rounded-2xl p-2 bg-black/10 text-black hover:outline hover:outline-black cursor-pointer hover:bg-white hover:text-black">
-        <a href="https://github.com/Aditya-Rawat01/type-shi.gg" target="_blank" rel="noreferrer">Github</a></p>
-        <p className="w-fit rounded-2xl p-2 bg-black/10 text-black hover:outline hover:outline-black cursor-pointer hover:bg-white hover:text-black">
-        <a href="https://type-shi-gg.vercel.app/" target="_blank" rel="noreferrer">Live link</a></p>
-
+        <p className="w-fit rounded-2xl p-2 bg-black/10 text-black hover:outline hover:outline-black cursor-pointer hover:bg-white hover:text-black text-sm lg:text-base">
+          <a
+            href="https://github.com/Aditya-Rawat01/url-shortener"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Github
+          </a>
+        </p>
+        <p className="w-fit rounded-2xl p-2 bg-black/10 text-black hover:outline hover:outline-black cursor-pointer hover:bg-white hover:text-black text-sm lg:text-base">
+          <a
+            href="https://slimurl.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Live link
+          </a>
+        </p>
       </div>
     </div>
   );

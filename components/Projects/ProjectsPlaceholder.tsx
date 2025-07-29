@@ -12,13 +12,13 @@ export default function ProjectPlaceholder() {
 }
 
 function MobileVersion() {
-  return <div className="w-full h-full sm:hidden"></div>;
+  return <div className="w-full h-full md:hidden"></div>;
 }
 
 function PCVersion() {
   return (
-    <div className="w-full h-screen bg-black text-white flex flex-col items-center justify-center relative">
-      <p className="font-port-sans text-6xl">Projects</p>
+    <div className="w-full h-screen bg-black text-white  flex-col items-center justify-center relative hidden md:flex">
+      <h3 className="font-port-sans text-4xl lg:text-6xl ">Projects</h3>
 
       <motion.div
         viewport={{ amount: 0.7, once:true }}

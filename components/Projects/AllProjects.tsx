@@ -14,7 +14,7 @@ export default function AllProjects() {
 }
 
 function MobileVersion() {
-  return <div className="w-full h-full sm:hidden"></div>;
+  return <div className="w-full h-full md:hidden"></div>;
 }
 
 function PCVersion() {
@@ -32,7 +32,7 @@ function PCVersion() {
   return (
     <motion.div
       ref={targetRef}
-      className="w-full h-[300vh] relative"
+      className="w-full h-[300vh] relative hidden text-4xl lg:text-6xl md:block"
       >
       <div className="sticky top-0 w-full h-screen">
         <motion.div

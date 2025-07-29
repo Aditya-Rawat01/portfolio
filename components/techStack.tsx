@@ -39,7 +39,7 @@ export default function TechStack() {
 }
 
 function MobileVersion() {
-  return <div className="w-full h-full sm:hidden"></div>;
+  return <div className="w-full h-full md:hidden"></div>;
 }
 
 function PCVersion() {
@@ -49,8 +49,8 @@ function PCVersion() {
   }, []);
 
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-around">
-      <p className="font-port-sans text-6xl mt-12">Tech Stack</p>
+    <div className="w-full h-screen hidden md:flex flex-col items-center justify-around">
+      <h3 className="font-port-sans text-4xl lg:text-6xl mt-10 lg:mt-12">Tech Stack</h3>
       <div
         style={{ opacity: isMounted ? 1 : 0 }}
         className="w-full h-[60vh] flex flex-col justify-center gap-5 overflow-hidden"
@@ -58,7 +58,7 @@ function PCVersion() {
         <MarqueeRow baseVelocity={2}>
           {firstRow.map((data, index)=>{
             return (
-              <Image key={index} src={data} width={data===framerMotion?140:80} alt="tech logos" className=""/>
+              <Image key={index} src={data} width={100} height={100}  alt="tech logos" className={`lg:w-24 w-20`}/>
             )
           })}
         </MarqueeRow>
@@ -66,7 +66,7 @@ function PCVersion() {
         <MarqueeRow baseVelocity={-2}>
           {secondRow.map((data, index)=>{
             return (
-              <Image key={index} src={data} width={data===mongodb?160:100} alt="tech logos" className={`${data===expressjs && "mt-4"}`}/>
+              <Image key={index} src={data} width={100} height={100} alt="tech logos" className={`w-24  ${data===mongodb ? "w-32 lg:w-40" :"lg:w-28"} ${data===expressjs && "mt-4"}`}/>
             )
           })}
         </MarqueeRow>
@@ -74,7 +74,7 @@ function PCVersion() {
         <MarqueeRow baseVelocity={2}>
           {thirdRow.map((data, index)=>{
             return (
-              <Image key={index} src={data} width={[vercel,git,docker].includes(data)?140:80} height={80} alt="tech logos" className={`${data===aws && "mt-2"}`}/>
+              <Image key={index} src={data} width={100} height={100} alt="tech logos" className={`w-20 lg:w-28 ${data===aws && "mt-2"}`}/>
             )
           })}
         </MarqueeRow>
@@ -123,10 +123,10 @@ moveBy += directionFactor.current * moveBy * velocityFactor.get();
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
-      <div className="w-screen bg-black/10 h-32 flex-shrink-0 flex items-center justify-around">
+      <div className="w-screen bg-green-800/10 h-24 lg:h-32 flex-shrink-0 flex items-center justify-around">
         {children}
       </div>
-      <div className="w-screen bg-black/10 h-32 flex-shrink-0 flex items-center justify-around">
+      <div className="w-screen bg-green-800/10 h-24 lg:h-32 flex-shrink-0 flex items-center justify-around">
         {children}
       </div>
     </motion.div>
