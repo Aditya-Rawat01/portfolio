@@ -6,6 +6,7 @@ html {
     overflow-x: clip;
 }
 @theme inline {
+    --breakpoint-custom:130rem;
     --font-port-sans: var(--font-port-sans);
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);

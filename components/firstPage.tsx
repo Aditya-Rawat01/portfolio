@@ -27,7 +27,7 @@ function PCVersion() {
               <div className="w-[95%] h-full absolute z-30 rounded-tr-3xl bg-green-300"></div>
               <div className="w-[90%] h-full absolute z-40 rounded-tr-3xl bg-red-300"></div>
               <div className="w-[85%] h-full absolute z-50 rounded-tr-3xl bg-white grid grid-rows-6 grid-cols-12 lg:grid-cols-6">
-                <div className=" row-start-3 col-start-2 col-span-full text-4xl lg:text-6xl flex items-center">
+                <div className=" row-start-3 col-start-2 col-span-full text-4xl xl:text-6xl custom:text-8xl flex items-center">
                 <h3
                   className="font-port-sans"
                 >
@@ -35,7 +35,7 @@ function PCVersion() {
                   <br />
                   Developer
                 </h3></div>
-                <div className="row-start-4 w-[59vw] h-20 lg:h-28 bg-[#623EFF] text-white text-5xl lg:text-7xl grid grid-cols-12 lg:grid-cols-7">
+                <div className="row-start-4 w-[59vw] h-20 xl:h-28  custom:h-40 bg-[#623EFF] text-white text-5xl xl:text-7xl custom:text-9xl grid grid-cols-12 lg:grid-cols-7">
                   <p className="col-start-2 row-start-2 col-span-full">
                     Aditya Rawat
                   </p>
@@ -46,10 +46,10 @@ function PCVersion() {
               <div className="w-[95%] h-full absolute z-30 rounded-br-3xl bg-green-300"></div>
               <div className="w-[90%] h-full absolute z-40 rounded-br-3xl bg-red-300"></div>
               <div className="w-[85%] h-full absolute z-50 rounded-br-3xl bg-white grid grid-rows-8 grid-cols-12 lg:grid-cols-6">
-                <h3 className="font-port-sans row-start-3 col-start-2  text-4xl lg:text-6xl col-span-full flex items-center">
+                <h3 className="font-port-sans row-start-3 col-start-2  text-4xl xl:text-7xl  custom:text-8xl col-span-full flex items-center">
                   About Me
                 </h3>
-                <p className="row-start-4 col-start-2 col-span-full text-xl lg:text-3xl">
+                <p className="row-start-4 col-start-2 col-span-full text-xl xl:text-3xl custom:text-4xl">
                   Relentless coder seeking breakthrough opportunities. Fearlessly
                   pursuing excellence in every line of code.
                 </p>

@@ -18,7 +18,7 @@ function MobileVersion() {
 function PCVersion() {
   return (
     <div className="w-full h-screen bg-black text-white  flex-col items-center justify-center relative hidden md:flex">
-      <h3 className="font-port-sans text-4xl lg:text-6xl ">Projects</h3>
+      <h3 className="font-port-sans text-4xl xl:text-6xl  custom:text-9xl">Projects</h3>
 
       <motion.div
         viewport={{ amount: 0.7, once:true }}

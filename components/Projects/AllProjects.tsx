@@ -32,7 +32,7 @@ function PCVersion() {
   return (
     <motion.div
       ref={targetRef}
-      className="w-full h-[300vh] relative hidden text-4xl lg:text-6xl md:block"
+      className="w-full h-[300vh] relative hidden text-4xl xl:text-6xl  custom:text-8xl md:block"
       >
       <div className="sticky top-0 w-full h-screen">
         <motion.div

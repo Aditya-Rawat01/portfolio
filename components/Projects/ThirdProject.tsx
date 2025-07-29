@@ -21,10 +21,10 @@ function MobileVersion() {
 
 function PCVersion() {
   return (
-    <div className="w-full h-screen bg-white/90 flex flex-col lg:gap-5 items-center">
-          <p className="font-port-sans lowercase mt-6 mb-2 lg:mt-12">Slim-url</p>
+    <div className="w-full h-screen bg-white/90 flex flex-col xl:gap-5 items-center">
+          <p className="font-port-sans lowercase mt-6 mb-2 xl:mt-12">Slim-url</p>
           <HeroVideoDialog
-            className="block dark:hidden w-1/2 lg:w-1/3 h-1/3"
+            className="block dark:hidden w-1/2 lg:w-[40%] xl:w-1/3 h-1/3"
         animationStyle="from-center"
         videoSrc="https://res.cloudinary.com/dlvcibxgx/video/upload/v1753688691/urlShortenerCloudinary_nhsuxs.mp4"
         thumbnailSrc={thumbnail.src}
@@ -38,11 +38,11 @@ function PCVersion() {
           defaultValue="item-1"
         >
           <AccordionItem value="item-1">
-            <AccordionTrigger className="font-port-sans text-xl lg:text-2xl">
+            <AccordionTrigger className="font-port-sans text-xl xl:text-2xl  custom:text-5xl">
               Description
             </AccordionTrigger>
-            <AccordionContent className="flex flex-col text-[13px] lg:text-base">
-              <ol className="pl-5 flex flex-col lg:gap-3">
+            <AccordionContent className="flex flex-col text-[13px] xl:text-base custom:text-3xl">
+              <ol className="pl-5  custom:pl-8 flex flex-col xl:gap-3">
                 <li className="list-disc">
                   Tech Stack : NEXT JS, Typescript, redis db, vercel.
                 </li>
@@ -60,11 +60,11 @@ function PCVersion() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger className="font-port-sans text-xl lg:text-2xl">
+            <AccordionTrigger className="font-port-sans text-xl xl:text-2xl  custom:text-5xl">
               Features
             </AccordionTrigger>
-            <AccordionContent className="flex flex-col text-[13px] lg:text-base">
-              <ol className="pl-5 flex flex-col lg:gap-3">
+            <AccordionContent className="flex flex-col text-[13px] xl:text-base  custom:text-3xl">
+              <ol className="pl-5  custom:pl-8 flex flex-col xl:gap-3">
                 <li className="list-disc">
                   Built and deployed a full-stack URL shortener using Next.js
                   (frontend + backend) and Redis for ultra-fast, in-memory URL
@@ -89,7 +89,7 @@ function PCVersion() {
         </Accordion>
       </div>
       <div className="absolute flex gap-4 bottom-2">
-        <p className="w-fit rounded-2xl p-2 bg-black/10 text-black hover:outline hover:outline-black cursor-pointer hover:bg-white hover:text-black text-sm lg:text-base">
+        <p className="w-fit rounded-2xl p-2 bg-black/10 text-black hover:outline hover:outline-black cursor-pointer hover:bg-white hover:text-black text-sm xl:text-base custom:text-3xl">
           <a
             href="https://github.com/Aditya-Rawat01/url-shortener"
             target="_blank"
@@ -98,7 +98,7 @@ function PCVersion() {
             Github
           </a>
         </p>
-        <p className="w-fit rounded-2xl p-2 bg-black/10 text-black hover:outline hover:outline-black cursor-pointer hover:bg-white hover:text-black text-sm lg:text-base">
+        <p className="w-fit rounded-2xl p-2 bg-black/10 text-black hover:outline hover:outline-black cursor-pointer hover:bg-white hover:text-black text-sm xl:text-base custom:text-3xl">
           <a
             href="https://slimurl.vercel.app/"
             target="_blank"
