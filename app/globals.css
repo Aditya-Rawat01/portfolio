@@ -5,8 +5,11 @@
 html {
     overflow-x: clip;
 }
+/* 22 to 25 rem */
 @theme inline {
-    --breakpoint-custom:130rem;
+    --breakpoint-sm:28rem;
+    --breakpoint-customList:24rem;
+    --breakpoint-custom:150rem;
     --font-port-sans: var(--font-port-sans);
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);

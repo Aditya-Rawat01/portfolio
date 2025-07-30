@@ -5,19 +5,14 @@ import { motion } from "motion/react";
 export default function ProjectPlaceholder() {
   return (
     <div className="w-full h-fit">
-      <MobileVersion />
-      <PCVersion />
+      <CommonVersion/>
     </div>
   );
 }
 
-function MobileVersion() {
-  return <div className="w-full h-full md:hidden"></div>;
-}
-
-function PCVersion() {
+function CommonVersion() {
   return (
-    <div className="w-full h-screen bg-black text-white  flex-col items-center justify-center relative hidden md:flex">
+    <div className="w-full h-screen bg-black text-white  flex-col items-center justify-center relative flex">
       <h3 className="font-port-sans text-4xl xl:text-6xl  custom:text-9xl">Projects</h3>
 
       <motion.div

@@ -1,5 +1,5 @@
 "use client";
-import { clamp, motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import FirstProject from "./FirstProject";
 import SecondProject from "./SecondProject";
@@ -7,17 +7,11 @@ import ThirdProject from "./ThirdProject";
 export default function AllProjects() {
   return (
     <div className="w-full h-fit">
-      <MobileVersion />
-      <PCVersion />
+      <CommonVersion/>
     </div>
   );
 }
-
-function MobileVersion() {
-  return <div className="w-full h-full md:hidden"></div>;
-}
-
-function PCVersion() {
+function CommonVersion() {
   const targetRef = useRef<HTMLDivElement>(null); // for attaching scroll to the container
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -32,7 +26,7 @@ function PCVersion() {
   return (
     <motion.div
       ref={targetRef}
-      className="w-full h-[300vh] relative hidden text-4xl xl:text-6xl  custom:text-8xl md:block"
+      className="w-full h-[300vh] relative text-3xl xl:text-6xl  custom:text-8xl block"
       >
       <div className="sticky top-0 w-full h-screen">
         <motion.div

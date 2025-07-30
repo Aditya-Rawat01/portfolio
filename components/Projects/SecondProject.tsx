@@ -9,22 +9,17 @@ import {
 export default function Second() {
   return (
     <div className="w-full h-fit">
-      <MobileVersion />
-      <PCVersion />
+      <CommonVersion/>
     </div>
   );
 }
 
-function MobileVersion() {
-  return <div className="w-full h-full sm:hidden"></div>;
-}
-
-function PCVersion() {
+function CommonVersion() {
   return (
     <div className="w-full h-screen bg-white/90 flex flex-col xl:gap-5 items-center">
-      <p className="font-port-sans lowercase mt-6 mb-2 xl:mt-12">talkative</p>
+      <p className="font-port-sans lowercase mt-6 mb-2 xl:mt-12 flex">talkative</p>
       <HeroVideoDialog
-        className="block dark:hidden w-1/2 lg:w-[40%] xl:w-1/3 h-1/3"
+        className="block dark:hidden w-4/5 sm:w-3/5 md:w-1/2 lg:w-[40%] xl:w-1/3"
         animationStyle="from-center"
         videoSrc="https://res.cloudinary.com/dlvcibxgx/video/upload/v1753689049/talkativeCloudinary_ko2rkh.mp4"
         thumbnailSrc={thumbnail.src}
@@ -52,9 +47,9 @@ function PCVersion() {
                 </li>
                 <li className="list-disc">
                   Engineered a full-featured, real-time chat application focused on performance and user experience. 
-                  I enabled seamless, person-to-person messaging using WebSockets, guaranteed message delivery with an 
+                  Enabled seamless, person-to-person messaging using WebSockets, guaranteed message delivery with an 
                   offline support system, and optimized media performance by integrating Cloudinary for dynamic avatar storage. 
-                  The application was further enhanced with real-time online/offline presence indicators to improve user interaction and awareness.
+                  <span className="hidden md:block">The application was further enhanced with real-time online/offline presence indicators to improve user interaction and awareness.</span>
                 </li>
               </ol>
             </AccordionContent>

@@ -32,33 +32,29 @@ const thirdRow = [postman, git, betterAuth, docker, github, vercel, aws]
 export default function TechStack() {
   return (
     <div className="w-full h-fit">
-      <MobileVersion />
-      <PCVersion />
+      <CommonVersion/>
     </div>
   );
 }
 
-function MobileVersion() {
-  return <div className="w-full h-full md:hidden"></div>;
-}
 
-function PCVersion() {
+function CommonVersion() {
   const [isMounted, setIsMounted] = useState(false);
   useEffect(() => { // to handle the layout shifts during the hard refresh
     setIsMounted(true);
   }, []);
 
   return (
-    <div className="w-full h-screen hidden md:flex flex-col items-center justify-around">
-      <h3 className="font-port-sans text-4xl xl:text-6xl mt-10 xl:mt-12 custom:text-9xl">Tech Stack</h3>
+    <div className="w-full h-screen flex flex-col items-center justify-center gap-12 md:justify-around border border-t-2 border-black">
+      <h3 className="font-port-sans text-3xl sm:text-3xl md:text-4xl xl:text-6xl md:mt-10 xl:mt-12 custom:text-9xl">Tech Stack</h3>
       <div
         style={{ opacity: isMounted ? 1 : 0 }}
-        className="w-full h-[60vh] flex flex-col justify-center gap-5 overflow-hidden"
+        className="w-full h-[40vh] sm:h-[60vh] flex flex-col justify-center gap-5 overflow-hidden"
       >
         <MarqueeRow baseVelocity={2}>
           {firstRow.map((data, index)=>{
             return (
-              <Image key={index} src={data} width={100} height={100}  alt="tech logos" className={`xl:w-24 w-20  custom:w-40`}/>
+              <Image key={index} src={data} width={100} height={100}  alt="tech logos" className={`xl:w-24 w-[42px] sm:w-16 md:w-20  custom:w-40`}/>
             )
           })}
         </MarqueeRow>
@@ -66,7 +62,7 @@ function PCVersion() {
         <MarqueeRow baseVelocity={-2}>
           {secondRow.map((data, index)=>{
             return (
-              <Image key={index} src={data} width={100} height={100} alt="tech logos" className={`w-24  ${data===mongodb ? "w-32 xl:w-40  custom:w-48" :"xl:w-28  custom:w-44"} ${data===expressjs && "mt-4"}`}/>
+              <Image key={index} src={data} width={100} height={100} alt="tech logos" className={` ${data===mongodb ? "md:w-32 xl:w-40  custom:w-48 w-[60px] sm:w-24" : "xl:w-28 custom:w-44  w-[48px] sm:w-[70px] md:w-24"} ${data===expressjs && "mt-2 md:mt-4"}`}/>
             )
           })}
         </MarqueeRow>
@@ -74,7 +70,7 @@ function PCVersion() {
         <MarqueeRow baseVelocity={2}>
           {thirdRow.map((data, index)=>{
             return (
-              <Image key={index} src={data} width={100} height={100} alt="tech logos" className={`w-20 xl:w-28  custom:w-40 ${data===aws && "mt-2"}`}/>
+              <Image key={index} src={data} width={100} height={100} alt="tech logos" className={`w-[42px] sm:w-16 md:w-20 xl:w-28  custom:w-40 ${data===aws && "mt-2"}`}/>
             )
           })}
         </MarqueeRow>
@@ -123,10 +119,10 @@ moveBy += directionFactor.current * moveBy * velocityFactor.get();
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
-      <div className="w-screen bg-green-800/10 h-24 xl:h-32  custom:h-44 flex-shrink-0 flex items-center justify-around">
+      <div className="w-screen bg-green-800/10 h-20 md:h-24 xl:h-32  custom:h-44 flex-shrink-0 flex items-center justify-around">
         {children}
       </div>
-      <div className="w-screen bg-green-800/10 h-24 xl:h-32  custom:h-44 flex-shrink-0 flex items-center justify-around">
+      <div className="w-screen bg-green-800/10 h-20 md:h-24 xl:h-32  custom:h-44 flex-shrink-0 flex items-center justify-around">
         {children}
       </div>
     </motion.div>

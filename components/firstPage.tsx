@@ -1,9 +1,6 @@
 "use client";
-import { useScroll, useTransform } from "motion/react";
-import { motion } from "motion/react";
 import Image from "next/image";
 import me from "@/public/me.png"
-import { useRef } from "react";
 export default function FirstPage() {
   return (
     <div className="w-full h-fit">
@@ -13,8 +10,34 @@ export default function FirstPage() {
   );
 }
 
+const aboutMe = "Relentless coder seeking breakthrough opportunities. Fearlessly pursuing excellence in every line of code."
 function MobileVersion() {
-  return <div className="w-full h-full md:hidden"></div>;
+  return (
+    <div className="w-full h-screen md:hidden">
+    <div className="w-full h-[60%] bg-[#623EFF] flex flex-col items-center justify-center relative">
+      <div className="bg-[#8BFF1F] w-[75%] h-[60%] sm:w-[50%] sm:h-[60%] sm:rotate-[10deg] rounded-3xl rotate-[12deg]"></div>
+      <div className="bg-white w-[75%] h-[60%] sm:w-[50%] sm:h-[60%] rounded-3xl overflow-hidden absolute">
+         <Image
+              src={me}
+              alt="Profile Image"
+              
+              layout="fill"
+              className="absolute w-full h-full object-cover object-[center_40%] z-50"
+            />
+         <Image
+              src={me}
+              alt="Profile Image"
+              className="absolute w-full h-full object-cover blur-sm"
+            />   
+      </div>
+      <p className="text-2xl text-white absolute bottom-2 sm:text-3xl">Aditya Rawat</p>
+    </div>
+    <div className="w-full h-[40%] bg-white grid grid-cols-8 grid-rows-8">
+      <p className="font-port-sans text-2xl col-start-2 row-start-2 sm:text-3xl">Web Developer</p>
+      <p className="col-start-2 col-span-6 row-start-4 sm:pt-4">{aboutMe}</p>
+    </div>
+  </div>
+  );
 }
 function PCVersion() {
   return (
@@ -50,8 +73,7 @@ function PCVersion() {
                   About Me
                 </h3>
                 <p className="row-start-4 col-start-2 col-span-full text-xl xl:text-3xl custom:text-4xl">
-                  Relentless coder seeking breakthrough opportunities. Fearlessly
-                  pursuing excellence in every line of code.
+                  {aboutMe}
                 </p>
               </div>
             </div>

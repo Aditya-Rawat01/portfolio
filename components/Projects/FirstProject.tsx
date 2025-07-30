@@ -10,23 +10,19 @@ import "@/app/globals.css"
 export default function FirstProject() {
   return (
     <div className="w-full h-fit">
-      <MobileVersion />
-      <PCVersion />
+      <CommonVersion/>
     </div>
   );
 }
 
-function MobileVersion() {
-  return <div className="w-full h-full sm:hidden"></div>;
-}
 
-function PCVersion() {
+function CommonVersion() {
   return (
     <div className="w-full h-screen bg-white/90 flex flex-col xl:gap-5 items-center relative">
-      <h3 className="font-port-sans lowercase mt-6 mb-2 xl:mt-12">type-shi.gg</h3>
-      
+      <h3 className="font-port-sans lowercase mt-6 mb-2 xl:mt-12 flex">type<span className="hidden sm:block">-</span>shi.gg</h3>
+     
       <HeroVideoDialog
-        className="block dark:hidden w-1/2 lg:w-[40%] xl:w-1/3 h-1/3"
+        className="block dark:hidden w-4/5 sm:w-3/5 md:w-1/2 lg:w-[40%] xl:w-1/3"
         animationStyle="from-center"
         videoSrc="https://res.cloudinary.com/dlvcibxgx/video/upload/v1753688914/type-shi.ggCloudinary_-_Made_with_Clipchamp_yxlojr.mp4"
         thumbnailSrc={thumbnail.src}
@@ -45,7 +41,7 @@ function PCVersion() {
               Description
             </AccordionTrigger>
             <AccordionContent className="flex flex-col text-[13px] xl:text-base custom:text-3xl">
-              <ol className="pl-5 custom:pl-8 flex flex-col xl:gap-3">
+              <ol className="pl-5 custom:pl-8 flex flex-col gap-2 xl:gap-3">
               <li className="list-disc">Tech Stack : NextJS, Jotai, Typescript, Prisma, Postgres, better-auth, zod,
 chartjs, motion.</li>
               <li className="list-disc">
@@ -54,10 +50,10 @@ chartjs, motion.</li>
               </li>
               <li className="list-disc">
                 This project is a full-stack, minimalist typing platform
-                designed to provide a clean, customizable, and effective practice environment for users of all levels. The platform's
+                designed to provide a clean, customizable, and effective practice environment for users of all levels. <span className="hidden md:block">The platform&apos;s
                 core philosophy is to remove distractions and empower users with
                 detailed feedback to accelerate their typing proficiency in both
-                conventional and programming languages.
+                conventional and programming languages.</span>
               </li>
               </ol>
             </AccordionContent>
@@ -66,14 +62,14 @@ chartjs, motion.</li>
             <AccordionTrigger className="font-port-sans text-xl xl:text-2xl  custom:text-5xl">
               Features
             </AccordionTrigger>
-            <AccordionContent className="flex flex-col text-[13px] xl:text-base  custom:text-3xl">
-              <ol className="pl-5  custom:pl-8 flex flex-col xl:gap-3">
+            <AccordionContent className="flex flex-col text-[11px] customList:text-[13px] xl:text-base  custom:text-3xl">
+              <ol className="pl-5 custom:pl-8 flex flex-col gap-2 xl:gap-3">
                 <li className="list-disc">
                   Implemented 12 different customizable visual themes and
                   different spoken and coding languages for practice like
                   english, spanish, portuguese, java, js etc.
                 </li>
-                <li className="list-disc">
+                <li className="list-disc hidden customList:block">
                   Responsive Design with end to end authentication implemented with better-auth supporting google, github and custom credentials for same account. 
                 </li>
                 <li className="list-disc">
