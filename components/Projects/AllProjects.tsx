@@ -1,6 +1,6 @@
 "use client";
 import { motion, useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import FirstProject from "./FirstProject";
 import SecondProject from "./SecondProject";
 import ThirdProject from "./ThirdProject";

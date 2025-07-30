@@ -6,7 +6,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import GithubIcon from "../svgs/githubIcon";
 import { Radio } from "lucide-react";
 export default function ThirdProject() {
@@ -21,12 +20,36 @@ function CommonVersion() {
     <div className="w-full h-screen bg-white/90 flex flex-col items-center relative">
       <h3 className="font-port-sans lowercase mt-6 xl:mt-12 flex">slim-url</h3>
       <div className="w-full h-fit justify-center flex items-center gap-2 lg:hidden">
-        <GithubIcon size={30} fill="#000000" />
-        <Radio className="text-green-500" />
+        <a
+          href="https://github.com/Aditya-Rawat01/url-shortener"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <GithubIcon size={30} fill="#000000" />
+        </a>
+        <a
+          href="https://slimurl.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Radio className="text-green-500" />
+        </a>
       </div>
       <div className="w-full justify-center hidden lg:flex items-center gap-2">
-        <GithubIcon size={40} fill="#000000" />
-        <Radio className="text-green-500" size={40} />
+        <a
+          href="https://github.com/Aditya-Rawat01/url-shortener"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <GithubIcon size={40} fill="#000000" />
+        </a>
+        <a
+          href="https://slimurl.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Radio size={40} className="text-green-500" />
+        </a>
       </div>
       <HeroVideoDialog
         className="block dark:hidden w-4/5 sm:w-3/5 md:w-1/2 lg:w-[40%] xl:w-1/3"
@@ -55,14 +78,16 @@ function CommonVersion() {
                   Url shortener with custom alias feature.
                 </li>
                 <li className="list-disc">
-                  <span className="hidden sm:flex">Developed a high-performance, full-stack URL shortener with
-                  Next.js and upstash Redis db.</span> This system features ultra-fast
-                  in-memory lookups and includes custom, expiration-based link
-                  generation for efficient, automated cleanup of inactive URLs
-                  after a two-week period. The integration of Redis is crucial
-                  for handling rapid read/write operations, which significantly
-                  enhances the overall responsiveness and performance of the
-                  service.
+                  <span className="hidden sm:flex">
+                    Developed a high-performance, full-stack URL shortener with
+                    Next.js and upstash Redis db.
+                  </span>{" "}
+                  This system features ultra-fast in-memory lookups and includes
+                  custom, expiration-based link generation for efficient,
+                  automated cleanup of inactive URLs after a two-week period.
+                  The integration of Redis is crucial for handling rapid
+                  read/write operations, which significantly enhances the
+                  overall responsiveness and performance of the service.
                 </li>
               </ol>
             </AccordionContent>

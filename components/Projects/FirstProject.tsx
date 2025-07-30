@@ -8,8 +8,8 @@ import {
 } from "@/components/ui/accordion";
 import "@/app/globals.css";
 import GithubIcon from "../svgs/githubIcon";
-import { Chrome, CloudCheck, Radio } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import { Radio } from "lucide-react";
+
 export default function FirstProject() {
   return (
     <div className="w-full h-fit">
@@ -25,12 +25,36 @@ function CommonVersion() {
         type<span className="hidden sm:block">-</span>shi.gg
       </h3>
       <div className="w-full h-fit justify-center flex items-center gap-2 lg:hidden">
-        <GithubIcon size={30} fill="#000000" />
-        <Radio className="text-green-500" />
+        <a
+          href="https://github.com/Aditya-Rawat01/type-shi.gg"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <GithubIcon size={30} fill="#000000" />
+        </a>
+        <a
+          href="https://type-shi-gg.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Radio className="text-green-500" />
+        </a>
       </div>
       <div className="w-full justify-center hidden lg:flex items-center gap-2">
-        <GithubIcon size={40} fill="#000000" />
-        <Radio className="text-green-500" size={40}/>
+        <a
+          href="https://github.com/Aditya-Rawat01/type-shi.gg"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <GithubIcon size={40} fill="#000000" />
+        </a>
+        <a
+          href="https://type-shi-gg.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Radio size={40} className="text-green-500" />
+        </a>
       </div>
       <HeroVideoDialog
         className="block dark:hidden w-4/5 sm:w-3/5 md:w-1/2 lg:w-[40%] xl:w-1/3"

@@ -6,7 +6,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import GithubIcon from "../svgs/githubIcon";
 import { Radio } from "lucide-react";
 export default function Second() {
@@ -22,12 +21,36 @@ function CommonVersion() {
     <div className="w-full h-screen bg-white/90 flex flex-col items-center relative">
       <h3 className="font-port-sans lowercase mt-6 xl:mt-12 flex">talkative</h3>
       <div className="w-full h-fit justify-center flex items-center gap-2 lg:hidden">
-        <GithubIcon size={30} fill="#000000" />
-        <Radio className="text-green-500" />
+        <a
+          href="https://github.com/Aditya-Rawat01/talkative--chat-app-"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <GithubIcon size={30} fill="#000000" />
+        </a>
+        <a
+          href="https://talkative-chat-app-steel.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Radio className="text-green-500" />
+        </a>
       </div>
       <div className="w-full justify-center hidden lg:flex items-center gap-2">
-        <GithubIcon size={40} fill="#000000" />
-        <Radio className="text-green-500" size={40} />
+        <a
+          href="https://github.com/Aditya-Rawat01/talkative--chat-app-"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <GithubIcon size={40} fill="#000000" />
+        </a>
+        <a
+          href="https://talkative-chat-app-steel.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Radio size={40} className="text-green-500" />
+        </a>
       </div>
       <HeroVideoDialog
         className="block dark:hidden w-4/5 sm:w-3/5 md:w-1/2 lg:w-[40%] xl:w-1/3"
@@ -63,10 +86,13 @@ function CommonVersion() {
                     focused on performance and user experience. Enabled
                     seamless, person-to-person messaging using WebSockets,
                     guaranteed message delivery with an offline support system,
-                    and optimized media performance. <span className="hidden md:inline">by integrating Cloudinary
-                    for dynamic avatar storage, The application was further
-                    enhanced with real-time online/offline presence indicators
-                    to improve user interaction and awareness.</span>
+                    and optimized media performance.{" "}
+                    <span className="hidden md:inline">
+                      by integrating Cloudinary for dynamic avatar storage, The
+                      application was further enhanced with real-time
+                      online/offline presence indicators to improve user
+                      interaction and awareness.
+                    </span>
                   </p>
                 </li>
               </ol>

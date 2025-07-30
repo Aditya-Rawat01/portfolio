@@ -1,7 +1,48 @@
 "use client";
 import Image from "next/image";
 import me from "@/public/me.png"
+import { useEffect } from "react";
 export default function FirstPage() {
+  // scrollSnapping logic
+    useEffect(() => {
+    let timeout:ReturnType<typeof setTimeout>;
+    
+    const handleScroll = () => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+
+        const snapPoints = [
+          0,
+          windowHeight,
+          windowHeight*2,
+          windowHeight*3,
+          windowHeight*4,
+          windowHeight*5,
+          windowHeight*6,
+          windowHeight*7
+          
+        ];
+
+        const closestSnapPoint = snapPoints.reduce((prev, curr) => {
+          return (Math.abs(curr - scrollY) < Math.abs(prev - scrollY) ? curr : prev);
+        });
+        window.scrollTo({
+          top: closestSnapPoint,
+          behavior: "smooth",
+        });
+
+      }, 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="w-full h-fit">
       <MobileVersion />
@@ -20,8 +61,6 @@ function MobileVersion() {
          <Image
               src={me}
               alt="Profile Image"
-              
-              layout="fill"
               className="absolute w-full h-full object-cover object-[center_40%] z-50"
             />
          <Image
@@ -65,7 +104,7 @@ function PCVersion() {
                 </div>
               </div>
             </div>
-            <div className="h-1/2 w-full bg-[#623EFF] relative">
+            <div className="h-1/2 w-full bg-[#623EFF] relative scroll-snap-start">
               <div className="w-[95%] h-full absolute z-30 rounded-br-3xl bg-green-300"></div>
               <div className="w-[90%] h-full absolute z-40 rounded-br-3xl bg-red-300"></div>
               <div className="w-[85%] h-full absolute z-50 rounded-br-3xl bg-white grid grid-rows-8 grid-cols-12 lg:grid-cols-6">
