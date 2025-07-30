@@ -52,7 +52,7 @@ function CommonVersion() {
               Description
             </AccordionTrigger>
             <AccordionContent className="flex flex-col text-[11px] xl:text-base custom:text-3xl md:text-[13px]">
-              <ol className="pl-5 custom:pl-8 flex flex-col gap-2 xl:gap-3">
+              <ol className="pl-5 custom:pl-8 flex flex-col gap-2">
                 <li className="list-disc">
                   Tech Stack : NextJS, Jotai, Typescript, Prisma, Postgres,
                   better-auth, zod, chartjs, motion.
@@ -80,7 +80,7 @@ function CommonVersion() {
               Features
             </AccordionTrigger>
             <AccordionContent className="flex flex-col text-[11px] xl:text-base custom:text-3xl md:text-[13px]">
-              <ol className="pl-5 custom:pl-8 flex flex-col gap-2 xl:gap-3">
+              <ol className="pl-5 custom:pl-8 flex flex-col gap-2">
                 <li className="list-disc">
                   Implemented 12 different customizable visual themes and
                   different spoken and coding languages for practice like

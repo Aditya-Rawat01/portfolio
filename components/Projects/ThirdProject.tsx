@@ -47,7 +47,7 @@ function CommonVersion() {
               Description
             </AccordionTrigger>
             <AccordionContent className="flex flex-col text-[11px] xl:text-base custom:text-3xl md:text-[13px]">
-              <ol className="pl-5  custom:pl-8 flex flex-col xl:gap-3">
+              <ol className="pl-5 custom:pl-8 flex flex-col gap-2">
                 <li className="list-disc">
                   Tech Stack : NEXT JS, Typescript, redis db, vercel.
                 </li>
@@ -72,7 +72,7 @@ function CommonVersion() {
               Features
             </AccordionTrigger>
             <AccordionContent className="flex flex-col text-[11px] xl:text-base custom:text-3xl md:text-[13px]">
-              <ol className="pl-5  custom:pl-8 flex flex-col xl:gap-3">
+              <ol className="pl-5 custom:pl-8 flex flex-col gap-2">
                 <li className="list-disc">
                   Built and deployed a full-stack URL shortener using Next.js
                   (frontend + backend) and Redis for ultra-fast, in-memory URL

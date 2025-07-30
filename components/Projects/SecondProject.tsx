@@ -48,7 +48,7 @@ function CommonVersion() {
               Description
             </AccordionTrigger>
             <AccordionContent className="flex flex-col text-[11px] xl:text-base custom:text-3xl md:text-[13px]">
-              <ol className="pl-5 custom:pl-8 flex flex-col xl:gap-3">
+              <ol className="pl-5 custom:pl-8 flex flex-col gap-2">
                 <li className="list-disc">
                   Tech Stack: NextJS, Express, typescript, Websockets, Mongodb,
                   prisma, react query.
@@ -77,7 +77,7 @@ function CommonVersion() {
               Features
             </AccordionTrigger>
             <AccordionContent className="flex flex-col text-[11px] xl:text-base custom:text-3xl md:text-[13px]">
-              <ol className="pl-5  custom:pl-8 flex flex-col xl:gap-3">
+              <ol className="pl-5 custom:pl-8 flex flex-col gap-2">
                 <li className="list-disc">
                   Built a real-time, person-to-person chat application with
                   WebSockets, enabling seamless messaging between users.
