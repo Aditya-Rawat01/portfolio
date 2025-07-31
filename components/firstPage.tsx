@@ -3,45 +3,6 @@ import Image from "next/image";
 import me from "@/public/me.png"
 import { useEffect } from "react";
 export default function FirstPage() {
-  // scrollSnapping logic
-    useEffect(() => {
-    let timeout:ReturnType<typeof setTimeout>;
-    
-    const handleScroll = () => {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => {
-        const scrollY = window.scrollY;
-        const windowHeight = window.innerHeight;
-
-        const snapPoints = [
-          0,
-          windowHeight,
-          windowHeight*2,
-          windowHeight*3,
-          windowHeight*4,
-          windowHeight*5,
-          windowHeight*6,
-          windowHeight*7
-          
-        ];
-
-        const closestSnapPoint = snapPoints.reduce((prev, curr) => {
-          return (Math.abs(curr - scrollY) < Math.abs(prev - scrollY) ? curr : prev);
-        });
-        window.scrollTo({
-          top: closestSnapPoint,
-          behavior: "smooth",
-        });
-
-      }, 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <div className="w-full h-fit">
