@@ -15,7 +15,6 @@ export default function Home() {
     "Waking up.",
     "Just a sec.",
     "Herding cats...",
-    "Waking up the hamsters...",
     "Assembling the pixels...",
     "Compiling assets...",
     "Rendering components..",
@@ -25,7 +24,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setFirstMount(false);
-    }, 3000)
+    }, 2000)
     setLoadingPlaceholder(placeholders[Math.floor(Math.random() * placeholders.length)])
     return ()=>clearTimeout(timer)
   }, []);
